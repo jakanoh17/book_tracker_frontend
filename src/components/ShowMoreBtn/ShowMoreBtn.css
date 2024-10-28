@@ -1,0 +1,12 @@
+.show-more-btn {
+  border-radius: 10px;
+  background-color: #ff7870;
+  border: none;
+  color: #fff;
+}
+
+.show-more-btn_type_container {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}

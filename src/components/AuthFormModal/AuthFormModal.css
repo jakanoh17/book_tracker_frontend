@@ -1,0 +1,35 @@
+.auth__input-title {
+  font-size: 16px;
+}
+
+.auth__span-message {
+  color: #f00;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.auth__input {
+  font-size: 18px;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid #fff;
+  background-color: transparent;
+}
+
+.auth__input:focus {
+  outline: none;
+}
+
+.auth__submit-btn {
+  display: block;
+  margin-top: 50px;
+  width: 100%;
+  background-color: #e6e8eb;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  height: 45px;
+  font-size: 18px;
+  color: #b6bcbf;
+}

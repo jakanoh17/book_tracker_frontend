@@ -1,0 +1,28 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  background-color: #fff0d67d;
+  border-bottom: 2px #fff solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header__logo {
+  height: 100%;
+}
+
+.header__auth-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  height: 100%;
+  text-shadow: 1px 1px 3px white;
+}
+
+.header__auth-btn:focus {
+  outline: none;
+}
