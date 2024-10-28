@@ -1,17 +1,11 @@
 // react elements
 import { useState, useCallback } from "react";
 
-// import files/file components
-import GoogleBooksApi from "../../utils/GoogleBooksApi";
-const googleApi = new GoogleBooksApi(
-  "https://www.googleapis.com",
-  "AIzaSyBWUdrb__jKymL6j7z7XQoYqJGIHCmeFWM"
-);
-
 export default function SearchBar({
   setCurrentBooks,
   setBooksLoading,
   setApiErrMsg,
+  googleApi,
 }) {
   const [searchInput, setSearchInput] = useState("harry potter");
 

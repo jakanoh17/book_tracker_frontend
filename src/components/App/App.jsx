@@ -16,6 +16,13 @@ import PageNotFound from "../404NotFound/PageNotFound";
 import Preloader from "../Preloader/Preloader";
 import ShowMoreBtn from "../ShowMoreBtn/ShowMoreBtn";
 
+// API
+import GoogleBooksApi from "../../utils/GoogleBooksApi";
+const googleApi = new GoogleBooksApi(
+  "https://www.googleapis.com",
+  "AIzaSyBWUdrb__jKymL6j7z7XQoYqJGIHCmeFWM"
+);
+
 function App() {
   // LOADING VARIABLES
   const [appLoading, setAppLoading] = useState(true);
@@ -97,6 +104,7 @@ function App() {
                   setCurrentBooks={setCurrentBooks}
                   setBooksLoading={setBooksLoading}
                   setApiErrMsg={setApiErrMsg}
+                  googleApi={googleApi}
                 />
               </section>
               <BookSection title="Search Results">
