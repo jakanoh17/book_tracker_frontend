@@ -13,6 +13,7 @@ export default function AuthFormModal({ emailName, passwordName }) {
         name={emailName}
         value={values[emailName] || ""}
         onChange={handleChange}
+        required
         placeholder="Enter email"
       />
       <p className="auth__input-title">Password</p>
@@ -23,6 +24,7 @@ export default function AuthFormModal({ emailName, passwordName }) {
         name={passwordName}
         value={values[passwordName] || ""}
         onChange={handleChange}
+        required
         placeholder="Enter password"
       />
       <button

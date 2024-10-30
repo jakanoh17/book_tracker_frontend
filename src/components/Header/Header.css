@@ -1,3 +1,14 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .header {
   box-sizing: border-box;
   width: 100%;
@@ -13,7 +24,7 @@
   height: 100%;
 }
 
-.header__auth-btn {
+.header__btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -23,6 +34,21 @@
   text-shadow: 1px 1px 3px white;
 }
 
-.header__auth-btn:focus {
+.header__btn:focus {
   outline: none;
+}
+
+.dropdown {
+  opacity: 0;
+}
+
+.header__profile:hover > .dropdown {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+.dropdown__option {
+  border: 2px solid #fff;
+  width: 100%;
+  background-color: #d6e5ff;
+  cursor: pointer;
 }

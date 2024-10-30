@@ -46,6 +46,17 @@ function App() {
     if (storedBooks) setCurrentBooks(JSON.parse(storedBooks));
   }, []);
 
+  // LOGOUT USER
+  function handleLogout() {
+    setLoggedIn(false);
+  }
+
+  // FOR DEMO: login w press of btn
+  function handleDemoLoginBtn() {
+    setLoggedIn(true);
+    closeModal();
+  }
+
   // OPEN MODALS
   function openLoginModal() {
     setActiveModal("login");
@@ -99,6 +110,7 @@ function App() {
                   loggedIn={loggedIn}
                   openLoginModal={openLoginModal}
                   openSignupModal={openSignupModal}
+                  handleLogout={handleLogout}
                 />
                 <SearchBar
                   setCurrentBooks={setCurrentBooks}
@@ -138,16 +150,13 @@ function App() {
           path="/profile"
           element={
             <ProtectedRoute isLoggedIn={loggedIn}>
-              <Header loggedIn={loggedIn} />
-              <BookSection title="Want To Read" page="profile">
-                {/* <BookCard bookTitle="help!!!!!!!!!!!!!!!" /> */}
-              </BookSection>
-              <BookSection title="Currently Reading" page="profile">
-                {/* <BookCard bookTitle="help!!!!!!!!!!!!!!!" /> */}
-              </BookSection>
-              <BookSection title="Already Read" page="profile">
-                {/* <BookCard bookTitle="help!!!!!!!!!!!!!!!" /> */}
-              </BookSection>
+              <Header loggedIn={loggedIn} handleLogout={handleLogout} />
+              <BookSection title="Want To Read" page="profile"></BookSection>
+              <BookSection
+                title="Currently Reading"
+                page="profile"
+              ></BookSection>
+              <BookSection title="Already Read" page="profile"></BookSection>
             </ProtectedRoute>
           }
         />
@@ -172,6 +181,9 @@ function App() {
         closeOnOutsideClk={closeModalOnOutsideClk}
       >
         <AuthFormModal emailName="loginEmail" passwordName="loginPassword" />
+        <button className="demo-btn" onClick={handleDemoLoginBtn}>
+          Automatically login here for demo
+        </button>
       </ModalWithForm>
       <ModalWithForm
         title="Signup"

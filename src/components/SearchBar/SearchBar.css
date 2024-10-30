@@ -5,7 +5,7 @@
   max-height: 25%;
 }
 
-.searchbar__container {
+.searchbar_location_homepage {
   position: absolute;
   top: 50%;
   display: flex;

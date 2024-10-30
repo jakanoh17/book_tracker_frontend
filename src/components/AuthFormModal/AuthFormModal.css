@@ -19,7 +19,7 @@
 }
 
 .auth__input:focus {
-  outline: none;
+  outline: 3px solid #fff;
 }
 
 .auth__submit-btn {

@@ -19,7 +19,7 @@ export default function BookCard({
   }
 
   return (
-    <div className="book" onClick={openPopup}>
+    <li className="book" onClick={openPopup}>
       <img src={img} alt={title} className="book__img" />
       <div className="book__overlay">
         <div className="book__background-btns">
@@ -38,6 +38,6 @@ export default function BookCard({
         </div>
         <h3 className="book__title">{title}</h3>
       </div>
-    </div>
+    </li>
   );
 }

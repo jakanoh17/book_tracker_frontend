@@ -40,7 +40,7 @@ export default function SearchBar({
           );
         }
       });
-  }, [searchInput, setCurrentBooks, setApiErrMsg, setBooksLoading]);
+  }, [googleApi, searchInput, setCurrentBooks, setApiErrMsg, setBooksLoading]);
 
   const handleSubmit = useCallback(
     (e) => {
@@ -60,7 +60,10 @@ export default function SearchBar({
   // }, []);
 
   return (
-    <form className="searchbar searchbar__container" onSubmit={handleSubmit}>
+    <form
+      className="searchbar searchbar_location_homepage"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         className="searchbar__input"
